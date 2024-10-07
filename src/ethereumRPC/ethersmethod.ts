@@ -44,6 +44,10 @@ class ETHEREUMRPC {
        
         return allTransfers;
     };
+    getBlockNumber = async():Promise<number>=>{
+        const blockNumber = await this.Provider.getBlockNumber()
+        return blockNumber
+    }
 }
 
 export { ETHEREUMRPC };
