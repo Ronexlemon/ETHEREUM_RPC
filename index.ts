@@ -10,6 +10,8 @@ import { Provider } from "./src/constants/constant";
     console.log("eth_getBalance",Number(bal))
     const history = await ethereum.getUserTokenHistory()
     console.log("eth_getUserTokenHistory",history)
+    const blockNumber = await ethereum.getBlockNumber();
+    console.log("eth_getBlockNumber",blockNumber)
 
 
 })();

@@ -42,7 +42,7 @@ class ETHEREUMRPC {
         const allTransfers = [...transferFromEvents, ...transferToEvents].sort((a, b) => a.blockNumber - b.blockNumber);
 
        
-        return allTransfers;
+        return allTransfers.slice(0,20);
     };
     getBlockNumber = async():Promise<number>=>{
         const blockNumber = await this.Provider.getBlockNumber()
