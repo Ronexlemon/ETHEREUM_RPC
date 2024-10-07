@@ -58,6 +58,10 @@ class ETHEREUMRPC {
         return block
 
     }
+    getTransactionByHash = async(hash: `0x${string}`):Promise<ethers.TransactionResponse |null> =>{
+        const tx = await this.Provider.getTransaction(hash)
+        return tx
+    }
 }
 
 export { ETHEREUMRPC };

@@ -16,6 +16,8 @@ import { Provider } from "./src/constants/constant";
     console.log("eth_getBlockByNumber",blockByNumber)
     const getBlockByHash = await ethereum.getBlockByHash(blockByNumber?.hash as `0x${string}`)
     console.log("eth_getBlockByHash",getBlockByHash)
+    const getTransationByHash = await ethereum.getTransactionByHash(blockByNumber?.hash as `0x${string}`)
+    console.log("eth_getTransactionByHash",getTransationByHash)
 
 
 })();
