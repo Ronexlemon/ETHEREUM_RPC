@@ -53,6 +53,11 @@ class ETHEREUMRPC {
         const block = await this.Provider.getBlock(1000)
         return block
     }
+    getBlockByHash = async(hash:`0x${string}`):Promise<ethers.Block |null>=>{
+        const block = await this.Provider.getBlock(hash)
+        return block
+
+    }
 }
 
 export { ETHEREUMRPC };
