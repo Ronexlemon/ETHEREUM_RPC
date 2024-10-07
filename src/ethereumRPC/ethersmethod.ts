@@ -62,6 +62,10 @@ class ETHEREUMRPC {
         const tx = await this.Provider.getTransaction(hash)
         return tx
     }
+    getTransactionReceipts = async(hash: `0x${string}`):Promise<ethers.TransactionReceipt |null> =>{
+        const tx = await this.Provider.getTransactionReceipt(hash)
+        return tx
+    }
 }
 
 export { ETHEREUMRPC };
