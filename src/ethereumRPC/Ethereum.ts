@@ -25,6 +25,10 @@ class ETHEREUM{
         let maxPriorityFeePerGas = await this.Provider.send("eth_maxPriorityFeePerGas",[])
         return maxPriorityFeePerGas
     }
+    getBlobBaseFee = async():Promise<number>=>{
+        let blobBaseFee = await this.Provider.send("eth_eth_blobBaseFee",[])
+        return blobBaseFee
+    }
 }
 
 export {ETHEREUM}
