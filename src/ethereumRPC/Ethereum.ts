@@ -29,6 +29,10 @@ class ETHEREUM{
         let blobBaseFee = await this.Provider.send("eth_eth_blobBaseFee",[])
         return blobBaseFee
     }
+    getFeeHistory = async():Promise<number>=>{
+        let feeHistory = await this.Provider.send("eth_feeHistory",["0x1",'latest',[]])
+        return feeHistory
+    }
 }
 
 export {ETHEREUM}
