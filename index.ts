@@ -29,6 +29,8 @@ const NewEthereum = async()=>{
     const ETHEREUMRPC_JSON = new ETHEREUM(add,Provider)
     const eth_chainId = await ETHEREUMRPC_JSON.getChainId()
     console.log("eth_chainId",eth_chainId)
+    const eth_blockNumber = await ETHEREUMRPC_JSON.getBlockNumber()
+    console.log("eth_blockNumber",eth_blockNumber)
 
 }
 

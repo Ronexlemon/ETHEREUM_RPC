@@ -13,6 +13,10 @@ class ETHEREUM{
         let chainId = await this.Provider.send("eth_chainId",[])
         return chainId
     }
+    getBlockNumber = async():Promise<number>=>{
+        let blockNumber = await this.Provider.send("eth_blockNumber",[])
+        return blockNumber
+    }
 }
 
 export {ETHEREUM}
