@@ -1,8 +1,8 @@
 // import ETHEREUMRPC
 import { ETHEREUMRPC } from "./src/ethereumRPC/ethersmethod";
 import { Provider } from "./src/constants/constant";
-
-(async()=>{
+import { ETHEREUM } from "./src/ethereumRPC/Ethereum";
+const OldEthereum =async()=>{
     const add :string ="0x65E28C9C4Ef1a756d8df1c507b7A84eFcF606fd4"
     const hash:`0x${string}` = "0x357885eed5a87ef53212d2540f68c5eca320c9c15576a0842d60d8c19d13be7a"
    
@@ -22,5 +22,18 @@ import { Provider } from "./src/constants/constant";
     const getTransactionReceipt = await ethereum.getTransactionReceipts(hash)
     console.log("eth_getTransactionReceipt",getTransactionReceipt)
 
+}
+
+const NewEthereum = async()=>{
+    const add :string ="0x65E28C9C4Ef1a756d8df1c507b7A84eFcF606fd4"
+    const ETHEREUMRPC_JSON = new ETHEREUM(add,Provider)
+    const eth_chainId = await ETHEREUMRPC_JSON.getChainId()
+    console.log("eth_chainId",eth_chainId)
+
+}
+
+(async()=>{
+    //await OldEthereum()
+await NewEthereum()
 
 })();

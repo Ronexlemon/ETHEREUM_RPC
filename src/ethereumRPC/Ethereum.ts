@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 
 
-class ETHREUM{
+class ETHEREUM{
     Provider : ethers.JsonRpcProvider
     address : string
     constructor(address:string,provider:ethers.JsonRpcProvider){
@@ -12,6 +12,7 @@ class ETHREUM{
     getChainId= async():Promise<number>=>{
         let chainId = await this.Provider.send("eth_chainId",[])
         return chainId
-
     }
 }
+
+export {ETHEREUM}
