@@ -39,6 +39,10 @@ const NewEthereum = async()=>{
     //console.log("eth_blobBaseFee",eth_blobBaseFee)
     const eth_feeHistory = await ETHEREUMRPC_JSON.getFeeHistory()
     console.log("eth_feeHistory",eth_feeHistory)
+    const eth_getBalance = await ETHEREUMRPC_JSON.getBalance()
+    console.log("eth_getBalance",eth_getBalance)
+    const eth_getCode = await ETHEREUMRPC_JSON.getCode()
+    console.log("eth_getCode",eth_getCode)
 
 }
 
