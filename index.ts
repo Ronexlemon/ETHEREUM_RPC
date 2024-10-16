@@ -31,6 +31,10 @@ const NewEthereum = async()=>{
     console.log("eth_chainId",eth_chainId)
     const eth_blockNumber = await ETHEREUMRPC_JSON.getBlockNumber()
     console.log("eth_blockNumber",eth_blockNumber)
+    const eth_gasPrice = await ETHEREUMRPC_JSON.getGasPrice()
+    console.log("eth_gasPrice",eth_gasPrice)
+    const eth_maxPriorityFeePerGas = await ETHEREUMRPC_JSON.getMaxPriorityFeePerGas()
+    console.log("eth_maxPriorityFeePerGas",eth_maxPriorityFeePerGas)
 
 }
 

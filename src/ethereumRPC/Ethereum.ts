@@ -17,6 +17,14 @@ class ETHEREUM{
         let blockNumber = await this.Provider.send("eth_blockNumber",[])
         return blockNumber
     }
+    getGasPrice = async():Promise<number>=>{
+        let gasPrice = await this.Provider.send("eth_gasPrice",[])
+        return gasPrice
+    }
+    getMaxPriorityFeePerGas = async():Promise<number>=>{
+        let maxPriorityFeePerGas = await this.Provider.send("eth_maxPriorityFeePerGas",[])
+        return maxPriorityFeePerGas
+    }
 }
 
 export {ETHEREUM}
